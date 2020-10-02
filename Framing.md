@@ -10,6 +10,6 @@ Supervised Machine learning -
 ## Feature
    A feature is an input variable—the x variable in simple linear regression. A simple machine learning project might use a single feature, while a more sophisticated machine learning project could use millions of features, specified as:
 
-                         ```
+```
                          X1,X2,X3,... Xn
-                         ```
+```
