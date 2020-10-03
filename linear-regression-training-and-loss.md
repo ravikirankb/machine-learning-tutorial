@@ -31,3 +31,35 @@ where:
 
    y' = b + w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + w<sub>3</sub>x<sub>3</sub>
                                         
+
+# Training and Loss
+
+__Training__ a model simply means learning good values for all the weights and bias from labeled examples. In __supervised learning__, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimizes loss; this process is called __empirical risk minimization__.
+
+Loss is the penalty for a bad prediction. That is, __loss__ is a number indicates how bad the prediction was on a single example. A loss of 0 value indicates a good model, anything above 0 is not an ideal model. The goal is therefore to keep a loss to minimum.
+
+# Squared Loss: a popular loss function
+
+The squared loss for a single example is as follows
+
+```
+  = the square of the difference between the label and its prediction
+  = (observation - (prediction of x))<super>2</super>
+  = (y - y')<super>2</super>
+```
+
+__Mean square error(MSE)__ s the average squared loss per example over the whole dataset. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
+
+ ```math
+    MSE =   1/N \[ \sum_{(x,y)} (y - prediction(x))^2 \]
+ ```
+
+where
+ * (x,y) is an example in which
+    * x is the set of features (for example, chirps/minute, age, gender) that the model uses to make predictions.
+    * y is the example's label (for example, temperature).
+ * prediction(x) s a function of the weights and bias in combination with the set of features x.
+ * D is a data set containing many labeled examples,(x,y) which are  pairs.
+ * N is the number of examples in D.
+ 
+ Although MSE is commonly-used in machine learning, it is neither the only practical loss function nor the best loss function for all circumstances.
